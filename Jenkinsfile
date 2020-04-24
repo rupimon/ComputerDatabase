@@ -4,7 +4,10 @@ node{
 		checkout scm
 	}
 	stage('Run Jar For Selenium Test'){
-		sh "java -jar ${WORKSPACE}/src/test/resources/executionjar/sample.jar"
+		echp ${WORKSPACE}
+		cd ${WORKSPACE}/src/test/resources/executionjar/
+		sh "java -jar sample.jar"
+		//sh "java -jar ${WORKSPACE}/src/test/resources/executionjar/sample.jar"
 		//java target/classes/sample/Mainprog.class
 		
 	}
