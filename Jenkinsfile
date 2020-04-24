@@ -4,9 +4,9 @@ node{
 		checkout scm
 	}
 	stage('Run Jar For Selenium Test'){
-		//sh "java -jar ${workspace}/src/test/resources/executionjar/sample.jar"
+		sh "java -jar ${WORKSPACE}/src/test/resources/executionjar/sample.jar"
 		//java target/classes/sample/Mainprog.class
-		sh "java -jar ${pwd}/src/test/resources/executionjar/sample.jar"
+		
 	}
 	stage('Push Generated HTML Report to Github'){
 		sh "git add *"
